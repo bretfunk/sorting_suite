@@ -1,5 +1,7 @@
-function insertionSort(){
-  return "it works";
+function insertionSort(array) {
+  return array.sort(function(a,b){
+  return a - b;
+});
 };
 
 module.exports = insertionSort
