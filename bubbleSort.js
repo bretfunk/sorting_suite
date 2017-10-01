@@ -3,14 +3,16 @@ function bubbleSort(array) {
   //return array.sort(function(a,b){
     //return a-b;
   //});
-  for (var i = 0; i < array.lenth; i++) {
+  for (var i = 0; i < array.length; i++) {
+    console.log("i" + i);
     for (var j = 0; j < array.length - i; j++) {
+      console.log("j" + j);
       if (array[j] > array[j + 1]) {
-        //array[j] = array[j + 1], array[j + 1] = array[j];
-        let removed = array.slice(j, j + 2)
-        array.splice(j, 2, removed.reverse())
-        //eval(pry.it);
-
+        let num1 = array[j];
+        let num2 = array[j + 1];
+        array[j] = num2;
+        array[j + 1] = num1;
+        console.log(array);
       };
     };
   };
